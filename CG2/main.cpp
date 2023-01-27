@@ -3,6 +3,7 @@
 #include "input.h"
 #include "GameScene.h"
 #include "FPS.h"
+#include"ImGuiManager.h"
 
 WinApp winApp_;
 using namespace DirectX;
@@ -19,10 +20,11 @@ int WINAPI WinMain(_In_ HINSTANCE , _In_opt_ HINSTANCE , _In_ LPSTR , _In_ int) 
 
 	//WindowsAPI初期化処理
 	winApp_.Initialize();
-
+	ImguiManager* imguiManager = ImguiManager::GetInstance();
+	imguiManager->Initialize();
 	FPS* fps = new FPS;
 	fps->SetFrameRate(60);
-
+	
 	Input& input_ = Input::GetInstance();
 	GameScene* gameScene = nullptr;
 

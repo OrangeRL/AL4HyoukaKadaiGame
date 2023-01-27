@@ -17,7 +17,7 @@
 using namespace DirectX;
 using namespace Microsoft::WRL;
 
-class DX12base :public Singleton<DX12base>{
+class DX12base :public Singleton<DX12base> {
 
 	friend Singleton<DX12base>;
 
@@ -29,6 +29,7 @@ public:
 	void PreDraw();
 
 	void PostDraw();
+
 
 private:
 	DX12base() {};
@@ -75,7 +76,7 @@ private:
 
 #pragma region//スワップチェーン
 	DXGI_SWAP_CHAIN_DESC1 swapChainDesc{};
-	
+
 	//IDXGISwapChain1のComPtrを用意
 	ComPtr<IDXGISwapChain1> swapChain1;
 
@@ -130,7 +131,7 @@ private:
 	D3D12_CPU_DESCRIPTOR_HANDLE dsvHandle;
 
 	//クリアカラー
-	FLOAT clearColor[4] = {0.0f , 0.0f , 0.0f , 0.0f};
+	FLOAT clearColor[4] = { 0.0f , 0.0f , 0.0f , 0.0f };
 
 	//ビューポート
 	D3D12_VIEWPORT viewport{};
@@ -142,5 +143,8 @@ private:
 
 	//前方宣言
 	WinApp* winApp = nullptr;
+
+	//バックバッファの数を取得
+	size_t GetBackBufferCount()const { return backBuffers.size(); }
 };
 

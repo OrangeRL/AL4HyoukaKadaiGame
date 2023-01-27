@@ -82,6 +82,28 @@
       <Filter>Source\Sprite</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx12.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImguiManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FPS.h">
@@ -154,6 +176,31 @@
       <Filter>Header\3D</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx12.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImguiManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.hlsli">
@@ -214,6 +261,12 @@
     </Filter>
     <Filter Include="Source\Scene">
       <UniqueIdentifier>{30f0b0f7-d55f-422b-8066-f248ec2ac040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{24ba2519-77ab-4646-aaea-e306d1fe2413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RayTracer">
+      <UniqueIdentifier>{d220482e-a4ce-4329-8e62-301816a89301}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

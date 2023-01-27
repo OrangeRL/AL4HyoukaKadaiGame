@@ -15,5 +15,5 @@ public:
 	//ウィンドウクラスの設定
 	WNDCLASSEX w{};
 	void Initialize();
-
+	static WinApp* GetInstance();
 };
