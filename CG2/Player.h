@@ -44,7 +44,7 @@ Vector3 angle = {};
 private:
 	void Rotate();
 	void Move();
-	void Collision();
+	
 
 	//ƒƒ“ƒo•Ï”
 private:

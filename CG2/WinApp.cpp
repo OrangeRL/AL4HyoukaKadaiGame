@@ -21,7 +21,7 @@ void WinApp::Initialize()
 {
 	w.cbSize = sizeof(WNDCLASSEX);
 	w.lpfnWndProc = (WNDPROC)WindowProc;	//ウィンドウプロシージャを設定
-	w.lpszClassName = L"DirectXGame";		//ウィンドウクラス名
+	w.lpszClassName = L"LE2B_16_ナウディー_ナウディーランナー";		//ウィンドウクラス名
 	w.hInstance = GetModuleHandle(nullptr);	//ウィンドウハンドル
 	w.hCursor = LoadCursor(NULL, IDC_ARROW);//カーソル指定
 

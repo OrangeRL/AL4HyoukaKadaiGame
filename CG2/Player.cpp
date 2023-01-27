@@ -42,7 +42,7 @@ void Player::Update() {
 
 	Rotate();
 	Move();
-	Collision();
+	
 
 	if (isDead == false) {
 		gameObject->Update();
@@ -160,79 +160,6 @@ void Player::Move() {
 
 }
 
-void Player::Collision() {
-	//マップチップ
-	for (int i = -1; i <= 1; i++) {
-		for (int j = -1; j <= 1; j++) {
-
-			int objectId = 0;
-
-			if (0 <= j + (int)(gameObject->worldTransform.translation.x / 2 + 25) &&
-				0 <= i + (int)(50 - (gameObject->worldTransform.translation.z / 2 + 25))) {
-
-				if (j + (int)(gameObject->worldTransform.translation.x / 2 + 25) < 50 &&
-					i + (int)(50 - (gameObject->worldTransform.translation.z / 2 + 25)) < 50) {
-
-					objectId = map->GetObjectID(
-						j + (int)(gameObject->worldTransform.translation.x / 2 + 25) ,
-						i + (int)(50 - (gameObject->worldTransform.translation.z / 2 + 25))
-					);
-
-					if (0 <= objectId) {
-
-						if (map->GetWorldTransform(objectId).translation.x - gameObject->worldTransform.translation.x < 2 &&
-							-2 < map->GetWorldTransform(objectId).translation.x - gameObject->worldTransform.translation.x) {
-							if (map->GetWorldTransform(objectId).translation.z - gameObject->worldTransform.translation.z < 2 &&
-								-2 < map->GetWorldTransform(objectId).translation.z - gameObject->worldTransform.translation.z) {
-
-								if (0.4 < moveSpeed) {
-									isDead = true;
-								}
-								else {
-									if (isHitMap == false) {
-										isHitMap = true;
-									}
-									else {
-										isHitMap = false;
-									}
-									gameObject->worldTransform.translation -= velocity;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-	}
-
-	//ゴール
-	if (goal->GetWorldTransform().translation.x - gameObject->worldTransform.translation.x < 3 &&
-		-3 < goal->GetWorldTransform().translation.x - gameObject->worldTransform.translation.x) {
-		if (goal->GetWorldTransform().translation.y - gameObject->worldTransform.translation.y < 3 &&
-			-3 < goal->GetWorldTransform().translation.y - gameObject->worldTransform.translation.y) {
-			if (goal->GetWorldTransform().translation.z - gameObject->worldTransform.translation.z < 3 &&
-				-3 < goal->GetWorldTransform().translation.z - gameObject->worldTransform.translation.z) {
-
-				isGoal = true;
-				//isDead = true;
-			}
-		}
-	}
-	//enemy
-	if (enemy->GetWorldTransform().translation.x - gameObject->worldTransform.translation.x < 40 &&
-		-40 < enemy->GetWorldTransform().translation.x - gameObject->worldTransform.translation.x) {
-		if (enemy->GetWorldTransform().translation.y - gameObject->worldTransform.translation.y < 3 &&
-			-3 < enemy->GetWorldTransform().translation.y - gameObject->worldTransform.translation.y) {
-			if (enemy->GetWorldTransform().translation.z - gameObject->worldTransform.translation.z < 3 &&
-				-3 < enemy->GetWorldTransform().translation.z - gameObject->worldTransform.translation.z) {
-
-				//isEnemy = true;
-				isDead = true;
-			}
-		}
-	}
-}
 
 //アクセッサ
 void Player::SetMap(Map* map) {

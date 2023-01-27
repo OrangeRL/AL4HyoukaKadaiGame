@@ -71,7 +71,7 @@ private: // メンバ変数
 		Stage,//ステージ
 	};
 
-	Scene scene_ = Scene::Title;
+	Scene scene_ = Scene::Stage;
 
 	int stage = 1;
 
