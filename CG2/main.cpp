@@ -568,7 +568,7 @@ void StencilApp::LoadTextures()
 
 	auto iceTex = std::make_unique<Texture>();
 	iceTex->Name = "iceTex";
-	iceTex->Filename = L"Textures/ice.dds";
+	iceTex->Filename = L"Textures/white1x1.dds";
 	ThrowIfFailed(DirectX::CreateDDSTextureFromFile12(md3dDevice.Get(),
 		mCommandList.Get(), iceTex->Filename.c_str(),
 		iceTex->Resource, iceTex->UploadHeap));
@@ -807,8 +807,7 @@ void StencilApp::BuildRoomGeometry()
 	geo->IndexFormat = DXGI_FORMAT_R16_UINT;
 	geo->IndexBufferByteSize = ibByteSize;
 
-	geo->DrawArgs["floor"] = floorSubmesh;
-	geo->DrawArgs["wall"] = wallSubmesh;
+
 	geo->DrawArgs["mirror"] = mirrorSubmesh;
 
 	mGeometries[geo->Name] = std::move(geo);
