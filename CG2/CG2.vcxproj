@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="Audio.cpp" />
     <ClCompile Include="DX12base.cpp" />
+    <ClCompile Include="DXSample.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FPS.cpp" />
     <ClCompile Include="GameObject3D.cpp" />
@@ -153,6 +154,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="nv_helpers_dx12\BottomLevelASGenerator.cpp" />
+    <ClCompile Include="nv_helpers_dx12\RaytracingPipelineGenerator.cpp" />
+    <ClCompile Include="nv_helpers_dx12\RootSignatureGenerator.cpp" />
+    <ClCompile Include="nv_helpers_dx12\ShaderBindingTableGenerator.cpp" />
+    <ClCompile Include="nv_helpers_dx12\TopLevelASGenerator.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -191,6 +197,21 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
     </FxCompile>
+    <None Include="shaders\Common.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\Hit.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\Miss.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\RayGen.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="shaders\shaders.hlsl">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.hlsli" />
@@ -204,6 +225,10 @@
   <ItemGroup>
     <ClInclude Include="Audio.h" />
     <ClInclude Include="DX12base.h" />
+    <ClInclude Include="Dx12\d3dx12.h" />
+    <ClInclude Include="DXRHelper.h" />
+    <ClInclude Include="DXSample.h" />
+    <ClInclude Include="DXSampleHelper.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="ErrorException.h" />
     <ClInclude Include="FPS.h" />
@@ -213,6 +238,11 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="nv_helpers_dx12\BottomLevelASGenerator.h" />
+    <ClInclude Include="nv_helpers_dx12\RaytracingPipelineGenerator.h" />
+    <ClInclude Include="nv_helpers_dx12\RootSignatureGenerator.h" />
+    <ClInclude Include="nv_helpers_dx12\ShaderBindingTableGenerator.h" />
+    <ClInclude Include="nv_helpers_dx12\TopLevelASGenerator.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Singleton.h" />

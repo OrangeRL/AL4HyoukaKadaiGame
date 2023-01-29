@@ -1,9 +1,16 @@
 #include "DX12base.h"
 
+#include "DXRHelper.h"
+#include "nv_helpers_dx12/BottomLevelASGenerator.h"
+
+#include "nv_helpers_dx12/RaytracingPipelineGenerator.h"
+#include "nv_helpers_dx12/RootSignatureGenerator.h"
+
 void DX12base::Initialize() {
 	
 	//nullptrチェック
 	assert(winApp);
+	//CheckRaytracingSupport();
 
 	//デバッグレイヤーの有効化
 
@@ -308,4 +315,13 @@ ComPtr<ID3D12Device> DX12base::GetDevice() {
 
 void DX12base::SetWinApp(WinApp* winApp) {
 	this->winApp = winApp;
+}
+
+void DX12base::CheckRaytracingSupport() const
+{
+	D3D12_FEATURE_DATA_D3D12_OPTIONS5 options5 = {};
+	ThrowIfFailed(device->CheckFeatureSupport(D3D12_FEATURE_D3D12_OPTIONS5,
+		&options5, sizeof(options5)));
+	if (options5.RaytracingTier < D3D12_RAYTRACING_TIER_1_0)
+		throw std::runtime_error("Raytracing not supported on device");
 }

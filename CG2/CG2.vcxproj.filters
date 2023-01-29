@@ -82,6 +82,24 @@
       <Filter>Source\Sprite</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="nv_helpers_dx12\BottomLevelASGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\RaytracingPipelineGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\RootSignatureGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\ShaderBindingTableGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_helpers_dx12\TopLevelASGenerator.cpp">
+      <Filter>nv_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="DXSample.cpp">
+      <Filter>Header</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FPS.h">
@@ -154,6 +172,33 @@
       <Filter>Header\3D</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="DXRHelper.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\BottomLevelASGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\RaytracingPipelineGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\RootSignatureGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\ShaderBindingTableGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_helpers_dx12\TopLevelASGenerator.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Dx12\d3dx12.h">
+      <Filter>Header\DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="DXSampleHelper.h">
+      <Filter>nv_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXSample.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.hlsli">
@@ -161,6 +206,21 @@
     </None>
     <None Include="Resources\Shaders\SpriteShaderHeader.hlsli">
       <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\Common.hlsl">
+      <Filter>Shader\RTX</Filter>
+    </None>
+    <None Include="shaders\Hit.hlsl">
+      <Filter>Shader\RTX</Filter>
+    </None>
+    <None Include="shaders\Miss.hlsl">
+      <Filter>Shader\RTX</Filter>
+    </None>
+    <None Include="shaders\RayGen.hlsl">
+      <Filter>Shader\RTX</Filter>
+    </None>
+    <None Include="shaders\shaders.hlsl">
+      <Filter>Shader\RTX</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +274,15 @@
     </Filter>
     <Filter Include="Source\Scene">
       <UniqueIdentifier>{30f0b0f7-d55f-422b-8066-f248ec2ac040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nv_helpers">
+      <UniqueIdentifier>{1d82bd0b-d4a9-44fa-b985-93bd9a8bd050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\RTX">
+      <UniqueIdentifier>{943a8ad7-61d6-4902-8423-f76f60669f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\DX12">
+      <UniqueIdentifier>{b778e315-ecf5-4eb0-8d02-bde14e408eb0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
