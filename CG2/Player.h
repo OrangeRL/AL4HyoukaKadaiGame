@@ -2,6 +2,7 @@
 #include "GameObject3D.h"
 #include "Input.h"
 #include "MathFunc.h"
+#include "DustParticleManager.h"
 
 class Map;
 class Goal;
@@ -16,7 +17,7 @@ public:
 
 	void Initialize(ViewProjection* viewProjection, XMMATRIX* matProjection);
 
-	void Update();
+	void Update(ViewProjection* viewProjection, XMMATRIX* matProjection);
 
 	void Draw();
 
@@ -80,7 +81,7 @@ private:
 	Map* map = nullptr;
 	Goal* goal = nullptr;
 	Enemy* enemy = nullptr;
-
+	DustParticleManager pManager;
 	
 	Vector3 move = {};
 };

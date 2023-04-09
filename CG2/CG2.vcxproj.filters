@@ -82,6 +82,8 @@
       <Filter>Source\Sprite</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="DustParticle.cpp" />
+    <ClCompile Include="DustParticleManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FPS.h">
@@ -154,6 +156,8 @@
       <Filter>Header\3D</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="DustParticle.h" />
+    <ClInclude Include="DustParticleManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.hlsli">

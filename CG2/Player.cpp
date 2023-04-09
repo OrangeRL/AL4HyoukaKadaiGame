@@ -26,7 +26,7 @@ Player::~Player() {
 }
 
 void Player::Initialize(ViewProjection* viewProjection , XMMATRIX* matProjection) {
-
+	pManager.Initialize(viewProjection, matProjection);
 	gameObject = new GameObject3D();
 	gameObject->PreLoadModel("Resources/star/star.obj");
 	gameObject->PreLoadTexture(L"Resources/star/star.jpg");
@@ -38,8 +38,8 @@ void Player::Initialize(ViewProjection* viewProjection , XMMATRIX* matProjection
 
 }
 
-void Player::Update() {
-
+void Player::Update(ViewProjection* viewProjection, XMMATRIX* matProjection) {
+	pManager.Update(viewProjection, matProjection, gameObject->worldTransform.translation, gameObject->worldTransform.scale);
 	Rotate();
 	Move();
 	Collision();
@@ -52,6 +52,7 @@ void Player::Update() {
 void Player::Draw() {
 	if (isDead == false) {
 		gameObject->Draw();
+		pManager.Draw();
 	}
 }
 

@@ -137,6 +137,12 @@ void GameScene::Update() {
 		//soundManager_.SoundPlayWave(soundManager_.xAudio2.Get() , soundData1 , false , 0.01f);
 		isPlayingBGM = true;
 	}
+	if (input_.PushKey(DIK_UP)) {
+		viewProjection_.eye.y+=1;
+	}
+	if (input_.PushKey(DIK_DOWN)) {
+		viewProjection_.eye.y -= 1;
+	}
 	viewProjection_.UpdateView();
 	//シーン管理
 	switch (scene_) {
@@ -152,7 +158,7 @@ void GameScene::Update() {
 	stageFloor->Update();
 
 	map->Update();
-	player->Update();
+	player->Update(&viewProjection_, &matProjection_);
 	particle->Update();
 	goal->Update();
 	enemy->Update();

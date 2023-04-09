@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="DustParticle.cpp" />
+    <ClCompile Include="DustParticleManager.cpp" />
     <ClCompile Include="DX12base.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FPS.cpp" />
@@ -203,6 +205,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Audio.h" />
+    <ClInclude Include="DustParticle.h" />
+    <ClInclude Include="DustParticleManager.h" />
     <ClInclude Include="DX12base.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="ErrorException.h" />
